@@ -1,0 +1,78 @@
+@font-face {
+    font-family: roboto;
+    src: url(/assets/fonts/Roboto-Regular.ttf);
+}
+
+body{
+    margin : 0%;
+    background-color: hsl(235, 18%, 26%);
+    font-family: roboto;
+    color: hsl(234, 29%, 20%);
+    font-size: 16px;
+}
+
+.card-frame{
+    margin: 5% 24.5%;
+    padding : 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.card div{
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.card div img{
+    width: 100%;
+    object-fit: cover;
+}
+
+input{
+    width: 90%;
+    padding: 4% 4%;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: rgb(56, 57, 58);
+    border-width: 1px;
+    margin-bottom: 3%;
+}
+
+button{
+    width: 98.5%;
+    padding: 4% 4%;
+    border-radius: 7px;
+    border-width: 0px;
+    margin-bottom: 3%;
+    background-color: hsl(234, 29%, 20%);
+    font-weight: 700;
+    color: white;
+    transition: background-image 1s;
+}
+
+button:hover{
+    background-image: linear-gradient(to right,rgb(255, 168, 102),rgb(253, 0, 0));
+    cursor:pointer;
+    box-shadow: 0 10px 9px rgb(253, 0, 0, 0.2);
+}
+
+button:active{
+    background-image:linear-gradient(to right,rgb(253, 0, 0),rgb(255, 168, 102));
+}
+
+ul{
+    list-style: url(/assets/images/icon-list.svg);
+    line-height: 35px;
+    margin-left: -4.5%;
+}
+
+#success{
+    display: none;
+}
+.suc{
+    flex-direction: column;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Newsletter sign-up form with success message</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<script>
+  function clicked(){
+    let email = document.getElementById('em').value;
+    document.getElementById('log').style.display='none';
+    document.getElementById('success').style.display='block';
+    document.getElementById('ret-email').innerHTML= email;
+  }
+  function ret(){
+    document.getElementById('success').style.display='none';
+    document.getElementById('log').style.display='block';
+  }
+
+</script>
+<body>
+  <div class="card-frame" id="log">
+    <div class="card">
+        <div style="width: 60%; padding: 4%;padding-bottom: 0%;">
+          <p style="font-weight: 700; font-size: 38px;">
+            Stay updated!
+          </p>
+          <p>
+            Join 60,000+ product managers receiving monthly updates on:
+            <ul>
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </p>
+          <p style="font-weight: 600;line-height: 25px;font-size: 14px;">
+            Email address<br>
+            <input type="email" placeholder="email@company.com" id="em">
+            <button onclick="clicked()">Subscribe to monthly newsletter</button>
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/illustration-sign-up-desktop.svg">
+        </div>
+    </div>
+  </div>
+  <div class="card-frame" id="success">
+    <div class="card suc">  
+      <p style="font-weight: 700; font-size: 38px;">
+        Thanks for subscribing!
+      </p>
+      A confirmation email has been sent to <span id="ret-email"></span>. Please open it and click the button inside to confirm your subscription.<br><br><br><br>
+  
+      <button onclick="ret()">Dismiss message</button>
+    </div>
+  </div>
+  <br>
+</body>
+</html>
